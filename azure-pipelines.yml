@@ -6,8 +6,12 @@
 trigger:
 - master
 
+- master
 pool:
-  vmImage: ubuntu-latest
+  name: Default
+  demands:
+   - agent.name -equals LAPTOP-3NADS90L
+  
 strategy:
   matrix:
     Python27:
